@@ -154,7 +154,7 @@
                 const data = await response.json();
                 console.log("🚀 [DEBUG] 2. Received raw JSON from server:", data);
                 
-                const schemaData = data.schema || {};
+                const schemaData = data || {};
                 console.log("🚀 [DEBUG] 3. Extracted schema data:", schemaData);
 
                 const transactionsArray = Array.isArray(schemaData.transactions) ? schemaData.transactions : [];

@@ -66,16 +66,14 @@ app.post('/process-pdf', upload.single('bankStatement'), async (req, res) => {
                             "transactions": [{
                                 "date": "",
                                 "amount": "",
-                                "description": "",
-                                "daily_balance": "",
-                                "transaction_id": ""
+                                "description": ""
                             }]
                         }
                     })}
                 ]
             }],
             generationConfig: {
-                maxOutputTokens: 65535, // This is already high, but for very long statements, 'gemini-1.5-pro' might be needed.
+                maxOutputTokens: 65535, 
                 temperature: 0.1,
                 responseMimeType: "application/json"
             }
